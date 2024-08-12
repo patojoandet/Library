@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ConsoleApp1.Models
+﻿namespace LibraryMGMT.Models
 {
     public class User
     {
-        public User(string userId, string name) {
+        public User(string userId, string name)
+        {
             UserId = userId;
             Name = name;
             BorrowedBooks = new List<Book>();
@@ -26,6 +21,6 @@ namespace ConsoleApp1.Models
         {
             BorrowedBooks.Remove(book);
         }
-        
+
     }
 }
