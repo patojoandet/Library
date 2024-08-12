@@ -1,8 +1,7 @@
-﻿using ConsoleApp1.Models;
+﻿using LibraryMGMT.Models;
 
 class Program
 {
-    // PATRON SINGLETON
     private static Library? library;
 
     public static Library Library

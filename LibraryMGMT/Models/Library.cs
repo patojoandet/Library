@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ConsoleApp1.Models
+﻿namespace LibraryMGMT.Models
 {
     public class Library
     {
@@ -102,7 +96,7 @@ namespace ConsoleApp1.Models
         /// </summary>
         /// <param name="title"></param>
         /// <returns></returns>
-        public List<Book> GetBooks(String title)
+        public List<Book> GetBooks(string title)
         {
             Console.WriteLine("Searching: " + title);
 
@@ -131,7 +125,7 @@ namespace ConsoleApp1.Models
                 var book = GetBook(title);
                 if (book != null)
                 {
-                    var canBorrow = !Lendings.Any(l => l.Book == book) || !Lendings.Any(l => (l.Book == book && (l.ReturnDate == null)));
+                    var canBorrow = !Lendings.Any(l => l.Book == book) || !Lendings.Any(l => l.Book == book && l.ReturnDate == null);
                     if (canBorrow)
                     {
                         RegisterLend(user, book);

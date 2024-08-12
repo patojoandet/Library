@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp1.Models
+﻿namespace LibraryMGMT.Models
 {
     internal class Constants
     {
